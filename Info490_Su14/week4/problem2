@@ -1,0 +1,75 @@
+{
+ "metadata": {
+  "name": ""
+ },
+ "nbformat": 3,
+ "nbformat_minor": 0,
+ "worksheets": [
+  {
+   "cells": [
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "import matplotlib.pyplot as plt\n",
+      "import numpy as np\n",
+      "result = np.loadtxt('mydata2.csv', dtype=int,delimiter = ',', skiprows = 1, usecols = (0,1),\n",
+      "    converters = {39: lambda x: float(x or 0), 72: lambda x: float(x or 0)})\n",
+      "\n",
+      "fig, ax = plt.subplots()\n",
+      "x =result[:,0]\n",
+      "y=result[:,1]\n",
+      "\n",
+      "\n",
+      "\n",
+      "ax.scatter(x,y)\n",
+      "\n",
+      "ax.set_xlabel(\"Age\")\n",
+      "ax.set_ylabel(\"Income\")\n",
+      "ax.set_title(\"Zaynaib Giwa Problem 2\")\n",
+      "plt.show()"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [],
+     "prompt_number": "*"
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [
+      "import matplotlib.pyplot as plt\n",
+      "import numpy as np\n",
+      "male= np.loadtxt('male.csv', dtype=int,delimiter = ',', skiprows = 1, usecols = (0,1),\n",
+      "    converters = {39: lambda x: float(x or 0), 72: lambda x: float(x or 0)})"
+     ],
+     "language": "python",
+     "metadata": {},
+     "outputs": [
+      {
+       "ename": "IndexError",
+       "evalue": "list index out of range",
+       "output_type": "pyerr",
+       "traceback": [
+        "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m\n\u001b[0;31mIndexError\u001b[0m                                Traceback (most recent call last)",
+        "\u001b[0;32m<ipython-input-1-1e1a6254cba5>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mnumpy\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0mnp\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m male= np.loadtxt('male.csv', dtype=int,delimiter = ',', skiprows = 1, usecols = (0,1),\n\u001b[0;32m----> 4\u001b[0;31m     converters = {39: lambda x: float(x or 0), 72: lambda x: float(x or 0)})\n\u001b[0m",
+        "\u001b[0;32m/usr/lib/python2.7/dist-packages/numpy/lib/npyio.pyc\u001b[0m in \u001b[0;36mloadtxt\u001b[0;34m(fname, dtype, comments, delimiter, converters, skiprows, usecols, unpack, ndmin)\u001b[0m\n\u001b[1;32m    844\u001b[0m                 \u001b[0;32mcontinue\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    845\u001b[0m             \u001b[0;32mif\u001b[0m \u001b[0musecols\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 846\u001b[0;31m                 \u001b[0mvals\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m[\u001b[0m\u001b[0mvals\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mi\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;32mfor\u001b[0m \u001b[0mi\u001b[0m \u001b[0;32min\u001b[0m \u001b[0musecols\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    847\u001b[0m             \u001b[0;31m# Convert each value according to its column and store\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    848\u001b[0m             \u001b[0mitems\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m[\u001b[0m\u001b[0mconv\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mval\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mfor\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mconv\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mval\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32min\u001b[0m \u001b[0mzip\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mconverters\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mvals\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+        "\u001b[0;31mIndexError\u001b[0m: list index out of range"
+       ]
+      }
+     ],
+     "prompt_number": 1
+    },
+    {
+     "cell_type": "code",
+     "collapsed": false,
+     "input": [],
+     "language": "python",
+     "metadata": {},
+     "outputs": []
+    }
+   ],
+   "metadata": {}
+  }
+ ]
+}
