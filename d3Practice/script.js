@@ -17,7 +17,7 @@ var myStyles =[
 				{
 				   width:230,
 					color:'#2176C7'}
-				]
+				];
 d3.selectAll('.item')
 	.data(myStyles)
 	.style({'color':'white',
